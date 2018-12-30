@@ -40,7 +40,7 @@ def exit_jukebox
 end
 
 def run(songs)
-#  help
+  help
   input = ""
   while input != "exit"
     puts "Please enter a command:"
