@@ -11,8 +11,16 @@
 # "Blue" => '< path to this directory >/jukebox-cli/audio/Emerald-Park/06.mp3',
 # "Graduation Failed" => '< path to this directory >/jukebox-cli/audio/Emerald-Park/07.mp3'
 # }
-
+require "pry"
 def help
+puts "I accept the following commands:
+
+- help : displays this help message
+- list : displays a list of songs you can play
+- play : lets you choose a song to play
+- exit : exits this program"
+
+
   #this method should be the same as in jukebox.rb
 
 end
@@ -20,10 +28,14 @@ end
 
 
 def list(my_songs)
-  #this method is different! Collect the keys of the my_songs hash and 
+ puts "Please enter a song name or number:"
+ play_song = gets.chomp
+ binding.pry
+  #this method is different! Collect the keys of the my_songs hash and
   #list the songs by name
 end
 
+list(songs)
 
 def play(my_songs)
   #this method is slightly different!
@@ -33,7 +45,7 @@ def play(my_songs)
   #if it isn't, tell them their choice is invalid
   #if it is, play the song using the system 'open <file path>' syntax
   #get the file path of the song by looking it up in the my_songs hash
-  
+
 end
 
 def exit_jukebox
