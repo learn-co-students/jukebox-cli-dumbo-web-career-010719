@@ -28,7 +28,7 @@ def play(songs)
   songs.select {|song|
     if response == song
       puts "Playing #{song}"
-    elsif response == songs[song]
+    elsif response == songs(song)
       puts "Playing #{song}"
     else
       puts "Invalid input, please try again"
